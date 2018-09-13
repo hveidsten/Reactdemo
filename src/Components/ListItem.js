@@ -3,12 +3,8 @@ import Checked from './Checked';
 
 const ListItem = props => {
   return(
-      <Checked render= {(checked) => (
-        <li>{props.item} {checked?  "X":""}</li>
-       
-      )
-} />
-
+    
+        <li>{props.item}</li>
   )};
 
 export default ListItem;
