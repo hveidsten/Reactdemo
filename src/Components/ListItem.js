@@ -1,5 +1,4 @@
 import React from "react";
-import Checked from './Checked';
 
 const ListItem = props => {
   return(
