@@ -23,12 +23,16 @@ export default class List extends React.Component {
     this.setState({
       formValue: ""
     });
+    this.newTodoInput.focus();
   }
 
   render() {
     return (
       <div>
-        <input onChange={this.handleChange} value={this.state.formValue} />
+        <input onChange={this.handleChange}
+          value={this.state.formValue}
+          ref = {(input) => {this.newTodoInput = input;}}
+        />
         <button onClick={this.handleSubmit}>Legg til</button>
         <ul>
           {this.props.items.map((i, k) => {
